@@ -1,0 +1,192 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Regular"),
+    url("../fonts/MontserratRegular.woff2") format("woff2"),
+    url("../fonts/MontserratRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat SemiBold"),
+    url("../fonts/MontserratSemiBold.woff2") format("woff2"),
+    url("../fonts/MontserratSemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Bold"),
+    url("../fonts/MontserratBold.woff2") format("woff2"),
+    url("../fonts/MontserratBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat ExtraBold"),
+    url("../fonts/MontserratExtraBold.woff2") format("woff2"),
+    url("../fonts/MontserratExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+:root {
+  --color-dark: #000;
+  --color-darkish: #666666;
+  --color-night: #414141;
+  --color-greyish: #cacaca;
+  --color-grey: #e5e5e5;
+  --color-light: #fff;
+  --color-active: #e1670e;
+  --color-btn: #ff9900;
+  --color-orange: #ffb84d;
+}
+.page {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-light);
+  margin: 0;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+  padding: 0 75px;
+}
+
+.faq {
+  padding-top: 30px;
+  margin-bottom: 93px;
+}
+
+.faq__title {
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+.faq__item {
+  margin-top: -1px;
+  border-top: 1px solid var(--color-greyish);
+  border-bottom: 1px solid var(--color-greyish);
+  transition: border 0.5s ease-in-out;
+  position: relative;
+}
+.faq__item:last-child {
+  margin-top: 0;
+  border-top: 1px solid var(--color-greyish);
+}
+.faq__if {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7% 0;
+  cursor: pointer;
+}
+.faq__subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--color-dark);
+  transition: color 0.5s ease-in-out;
+}
+.faq__icon {
+  position: relative;
+  display: block;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-greyish);
+  transition: background-color 0.5s ease-in-out;
+}
+.faq__icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 1px;
+  background-color: var(--color-dark);
+  transform: translate(-50%, -50%);
+}
+.faq__icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-dark);
+  transform: translate(-50%, -50%);
+}
+.faq__item:focus {
+  border-top: 1px solid var(--color-btn);
+  border-bottom: 1px solid var(--color-btn);
+}
+.faq__item:focus .faq__subtitle {
+  color: var(--color-btn);
+}
+.faq__item:focus .faq__icon {
+  background-color: var(--color-btn);
+}
+.faq__item:focus .faq__icon::before,
+.faq__item:focus .faq__icon::after {
+  background-color: var(--color-light);
+}
+.faq__item:hover {
+  border-top: 1px solid var(--color-btn);
+  border-bottom: 1px solid var(--color-btn);
+  z-index: 1;
+}
+.faq__item:hover .faq__subtitle {
+  color: var(--color-btn);
+}
+.faq__item:hover .faq__icon {
+  background-color: var(--color-btn);
+}
+.faq__item:active .faq__icon {
+  transform: rotate(45deg);
+}
+.faq__item:hover .faq__icon::before,
+.faq__item:hover .faq__icon::after {
+  background-color: var(--color-light);
+}
