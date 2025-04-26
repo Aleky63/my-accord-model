@@ -77,11 +77,11 @@ ul {
   --color-darkish: #585555;
   --color-night: #414141;
   --color-greyish: #cacaca;
-  --color-grey: #e5e5e5;
+  --color-grey: #d1cdcd;
   --color-light: #fff;
-  --color-active: #df7931;
-  --color-btn: #ff9900;
-  --color-orange: #f3b65a;
+  --color-active: #c97539;
+  --color-btn: #eb8f05;
+  --color-orange: #ebba70;
 }
 .page {
   font-family: "Montserrat", sans-serif;
